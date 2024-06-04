@@ -1,0 +1,8 @@
+namespace NumQue
+{
+    [default_interface]
+    runtimeclass DiffeqPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        DiffeqPage();
+    }
+}

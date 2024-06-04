@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NumQue.IntegralPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NumQue"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<StackPanel Orientation="Horizontal" >
+			<StackPanel Orientation="Vertical">
+				<NumberBox x:Name="bI" Width="70" 
+						   SpinButtonPlacementMode="Compact" SmallChange="10" 
+						   Margin="10" Header="Верхний предел" PlaceholderText="b"/>
+				<NumberBox x:Name="aI" Width="70" 
+						   SpinButtonPlacementMode="Compact" SmallChange="10" 
+						   Margin="10" Header="Нижний предел" PlaceholderText="a"/>
+			</StackPanel>
+
+			<StackPanel Orientation="Vertical">
+				<TextBox x:Name="fI" Width="300" Margin="10" TextWrapping="NoWrap" Height="60" Header="Функция:" PlaceholderText="Введите функцию"/>
+				<StackPanel HorizontalAlignment="Left">
+					<NumberBox x:Name="nI" 
+						   SpinButtonPlacementMode="Compact" SmallChange="10"
+						   Margin="10" Header="Количество разбиений" PlaceholderText="n"/>
+				</StackPanel>
+				
+			</StackPanel>
+			
+			
+			<Button x:Name="integB" Margin="10" Click="integB_Click">Рассчитать</Button>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<StackPanel Orientation="Vertical" Margin="10">
+				<TextBlock>Левые прямоугольники</TextBlock>
+				<TextBlock>Правые прямоугольники</TextBlock>
+				<TextBlock>Центральные прямоугольники</TextBlock>
+				<TextBlock>Трапеции</TextBlock>
+				<TextBlock>Параболы</TextBlock>
+			</StackPanel>
+			<StackPanel Orientation="Vertical" Margin="10">
+				<TextBlock x:Name="lrL" />
+				<TextBlock x:Name="rrL"/>
+				<TextBlock x:Name="crL"/>
+				<TextBlock x:Name="trL"/>
+				<TextBlock x:Name="paL"/>
+			</StackPanel>
+		</StackPanel>
+	</StackPanel>
+</Page>

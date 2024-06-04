@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NumQue.ApplPrPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NumQue"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:win2dcanvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+			
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Image Height="400" Source="/images/image.png"/>
+			</StackPanel>
+
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+				<StackPanel Orientation="Horizontal">
+					<StackPanel VerticalAlignment="Center">
+						<TextBox x:Name="mI" Width="90"
+						   Margin="10" Header="Масса" PlaceholderText="m" TextWrapping="NoWrap"/>
+					</StackPanel>
+					<TextBox x:Name="kI" Width="90"
+						   Margin="10" Header="Коэф. сопр." PlaceholderText="k" TextWrapping="NoWrap"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBox x:Name="HI" Width="90"
+					   Margin="10" Header="Высота" PlaceholderText="H" TextWrapping="NoWrap"/>
+					<TextBox x:Name="hI" Width="90"
+					   Margin="10" Header="Шаг интег." PlaceholderText="h" TextWrapping="NoWrap"/>
+				</StackPanel>
+
+				<StackPanel HorizontalAlignment="Center">
+					<Button x:Name="timeB" Margin="10" Click="timeB_Click">Рассчитать</Button>
+				</StackPanel>
+
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+					<StackPanel Orientation="Vertical" Margin="10">
+						<TextBlock>Время падения</TextBlock>
+					</StackPanel>
+					<StackPanel Orientation="Vertical" Margin="10">
+						<TextBlock x:Name="tL" />
+					</StackPanel>
+				</StackPanel>
+				
+			</StackPanel>
+			
+		</StackPanel>
+		
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Grid Width="400" Height="400">
+				<win2dcanvas:CanvasControl x:Name="canvas" Draw="CanvasControl_Draw"/>
+			</Grid>
+		</StackPanel>
+    </StackPanel>
+</Page>

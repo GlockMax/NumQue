@@ -1,0 +1,8 @@
+namespace NumQue
+{
+    [default_interface]
+    runtimeclass ApplPrPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        ApplPrPage();
+    }
+}

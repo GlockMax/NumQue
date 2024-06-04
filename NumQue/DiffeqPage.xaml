@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NumQue.DiffeqPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NumQue"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<TextBox x:Name="fI" Width="300" Margin="10" TextWrapping="NoWrap" Height="60" Header="Функция:" PlaceholderText="Введите функцию"/>
+
+			<StackPanel Orientation="Horizontal">
+				<TextBox x:Name="x0I" Width="70"
+				   Margin="10" Header="x0" PlaceholderText="x0" TextWrapping="NoWrap"/>
+				<TextBox x:Name="y0I" Width="70"
+				   Margin="10" Header="y0" PlaceholderText="y0" TextWrapping="NoWrap"/>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal">
+				
+
+				<StackPanel VerticalAlignment="Center">
+					<TextBox x:Name="nI" Width="100"
+				   Margin="10" Header="Кол-во значений n" PlaceholderText="n" TextWrapping="NoWrap"/>
+				</StackPanel>
+				<StackPanel VerticalAlignment="Center">
+					<TextBox x:Name="hI" Width="70"
+					   Margin="10" Header="Шаг h" PlaceholderText="h" TextWrapping="NoWrap"/>
+				</StackPanel>
+			</StackPanel>
+
+			<Button x:Name="fvB" Margin="10" Click="fvB_Click">Рассчитать</Button>
+
+
+		</StackPanel>
+		<StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+			<StackPanel Orientation="Horizontal" Height="400">
+
+				<TextBox x:Name="outputT1" Header="Эйлер: x, y" Margin="10"
+					 IsReadOnly="True" TextWrapping="Wrap" IsSpellCheckEnabled="False" MinWidth="180"/>
+
+				<TextBox x:Name="outputT2" Header="Рунге-Кутта 4-го порядка: x, y" Margin="10"
+					 IsReadOnly="True" TextWrapping="Wrap" IsSpellCheckEnabled="False" MinWidth="180"/>
+				
+			</StackPanel>
+		</StackPanel>
+	</StackPanel>
+</Page>

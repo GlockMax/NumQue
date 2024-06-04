@@ -1,0 +1,8 @@
+namespace NumQue
+{
+    [default_interface]
+    runtimeclass IntegralPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        IntegralPage();
+    }
+}
